@@ -1,0 +1,122 @@
+#include <iostream>
+using namespace std;
+
+
+/*Hallo Alexander, hab die Aufgabe jetz schon paar mal probiert aber schaffe die nicht,
+wenn du mir ein Lösungsansatz geben könntest wäre super.
+MfG Denis*/
+
+
+void SortPointer(int** pa, int** pb, int** pc) {
+
+	int* ppa = *pa;
+	*pa = *pb;
+	*pb = *pc;
+	*pc = ppa;
+
+
+	if (*pa < *pb)
+	{
+		int* ppa = *pa;
+		*pa = *pb;
+		*pb = ppa;
+	}
+	if (*pc < *pb)
+	{
+		int* ppa = *pc;
+		*pc = *pb;
+		*pb = ppa;
+	}
+	else if (*pa < *pc)
+	{
+		int* ppa = *pa;
+		*pa = *pc;
+		*pc = ppa;
+	}
+	else {
+
+		int* ppa = *pa;
+		*pa = *pc;
+		*pc = *pb;
+		*pb = ppa;
+	}
+}
+
+if (*pb < *pc)
+{
+	int* ppa = *pb;
+	*pb = *pc;
+	*pc = ppa;
+}
+		if (*pc < *pa)
+		{
+			int* ppc = *pa;
+			*pc = *pb;
+			*pb = ppa;
+		}
+		else if (*pb < *pa)
+		{
+			int* ppa = *pb;
+			*pb = *pa;
+			*pa = ppa;
+		}
+		else {
+			int* ppa = *pa;
+			*pa = *pb;
+			*pb = *pc;
+			*pc = ppa;
+		}
+	}
+
+	else if (*pc < *pa)
+	{
+	int* ppa = *pc;
+	*pc = *pa;
+	*pa = ppa;
+	
+}
+		if (*pa < *pb)
+		{
+			int* ppa = *pa;
+			*pa = *pb;
+			*pb = ppa;
+		}
+		else if (*pc < *pb)
+		{
+			int* ppa = *pc;
+			*pc = *pb;
+			*pb = ppa;
+		}
+		else 
+		int* ppa = *pa;
+		*pa = *pb;
+		*pb = *pc;
+		*pc = ppa;
+	}	
+
+
+	else
+	{
+	int* ppa = *pa;
+	*pa = *pb;
+	*pb = *pc;
+	*pc = ppa;
+	}
+}
+
+
+void main() {
+
+	int* a = new int{ 2 };
+	int* b = new int{ 1 };
+	int* c = new int{ -1 };
+	
+	
+	SortPointer(&a, &b, &c);
+
+	cout << "a= " << *a << " b=" << *b << " c=" << *c;
+	
+
+
+	
+}
